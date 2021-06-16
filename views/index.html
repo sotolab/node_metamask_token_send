@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Agriculture DApp with MetaMask</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sototoken.js"></script>
+</head>
+
+<body>
+    <header id="menu">
+        <a href="#" id="linkHome">Home</a>
+        <a href="#" id="linkSubmitItem">Soto 토큰 전송</a>
+    </header>
+
+    <main>
+        <section id="loadingBox">Loading ...</section>
+
+        <section id="infoBox">
+            <header>x</header>
+            <p>Info</p>
+        </section>
+
+        <section id="errorBox">
+            <header>x</header>
+            <p>Error</p>
+        </section>
+
+        <section id="viewHome">
+            <h1>SotoToken DApp with MetaMask</h1>
+            Welcome to the "SotoToken DApp with MetaMask" DApp. This
+            decentralized app runs on the Etherereum blockchain network and
+            holds a registry of items in a Solidity smart contract.
+            <ul>
+                <li>Soto토큰을 전송 할 수 있습니다.</li>
+                <li><b>사용자는</b> 토큰을 전송할 수 있습니다. </li>
+                <li>
+                    Contract <b>address</b> (at Ropsten testnet):
+                    <a href="#" id="contractLink" target="_blank"></a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="viewSubmitItem">
+            <h1>토큰 전자지갑 관리</h1>
+            <p>
+                토큰은 스마트 컨트랙트를 통해 블록에 저장한다.
+                스마트 컨트랙트는 이더리움 블록체인 네트워크 기반으로 분산 공개 장부에 기록된다.
+            </p>
+            <form action="/sendtoken" method="post">
+                <label>코인:
+                    <input type="text" id="sendCoin" name="sendCoin" value="0.001" placeholder="How many..">
+                </label>
+                <br>
+                <label>받는사람계정:
+                    <input type="text" id="toAccount" name="toAccount" value="0x86A0660B6c948D49c230Dd99cAE183f44Cdd26A7" placeholder="What is ..">
+                </label>
+                <br>
+                <label>제출:
+                    <input type="submit" />
+                </label>
+            </form>
+            <div id="message"></div>
+            <table style="width:100%" id="table1"></table>
+
+            <!-- <input type="file" id="documentForUpload" /><br />
+                <input type="button" id="documentUploadButton" value="Submit" /> -->
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://sotoedu.herokuapp.com/">Sunstar</a>
+        - Copyright &copy; Sunstar Since 2015. All rights reserved.
+    </footer>
+</body>
+
+</html>
